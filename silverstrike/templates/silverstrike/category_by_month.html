@@ -63,8 +63,8 @@
           {% trans 'Uncategorized' %}
           {% endif %}
         </td>
-        <td class="text-red">{{ category.spent|intcomma }}</td>
-        <td class="text-green">{{ category.income|intcomma }}</td>
+        <td class="text-red">{{ category.spent|floatformat:2|intcomma }}</td>
+        <td class="text-green">{{ category.income|floatformat:2|intcomma }}</td>
       </tr>
       {% endfor %}
       <tr><th>{% trans 'Total' %}</th><th class="text-red">{{ sum_expense }}</th><th class="text-green">{{ sum_income }}</th></tr>
